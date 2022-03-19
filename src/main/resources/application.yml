@@ -1,0 +1,19 @@
+spring:
+  #指定数据源的具体信息
+  datasource:
+    url: jdbc:h2:~/Software/h2-2.1.210/data/h2test
+    username: root
+    password: abc123_
+  jpa:
+    #数据源类型
+    database: h2
+    #数据源使用的Hibernate方言
+    database-platform: org.hibernate.dialect.H2Dialect
+    #打开sql日志
+    show-sql: true
+    hibernate:
+      #启动应用的时候创建表，关闭应用的时候删除数据和表
+      ddl-auto: create-drop
+    #这个是为了关闭启动日志中的Hibernate警告
+    open-in-view: false
+
